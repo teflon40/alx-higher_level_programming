@@ -4,7 +4,7 @@ if __name__ == '__main__':
     from sys import argv, exit
     from calculator_1 import div, add, sub, mul
 
-    if len(argv) - 1 == 0:
+    if len(argv) - 1 != 3:
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
 
