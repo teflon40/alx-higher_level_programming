@@ -19,6 +19,6 @@ if __name__ == '__main__':
     elif op == '+':
         print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
     elif op == '*':
-        print("{:d} + {:d} = {:d}".format(a, b, mul(a, b)))
+        print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
     else:
-        print("{:d} + {:d} = {:d}".format(a, b, div(a, b)))
+        print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
