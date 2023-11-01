@@ -1,0 +1,40 @@
+Testing "0-add_integer" module
+==============================
+
+Using "add_integer" function
+------------------------------
+
+A function that returns the sum of two integers
+
+import the function:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+usage: add two positive integers
+>>> add_integer(5, 5)
+10
+
+usage: add a positive and negative integer
+>>> add_integer(5, -5)
+0
+
+usage: test for float overflow
+>>> add_integer(float('inf'), float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+Usage: converting float NAN to integer
+>>> add_integer(float('NAN'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+usage: Test for one missing argument
+>>> add_integer(25)
+123
+
+usage: Empty parameter (missing to arguments)
+add_integer()
+Traceback (most recent call last)
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
