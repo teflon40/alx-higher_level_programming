@@ -5,7 +5,7 @@
 class Square:
     """Defines a class by size"""
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """
             Initialize private instance attribute
             args:
