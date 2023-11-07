@@ -1,0 +1,84 @@
+Testing "7-base_geometry" module.
+=================================
+using "integer_validator()" method
+----------------------------------
+
+A public instance method that validates value.
+
+Imprt the module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+test for Missing or too many arguments
+--------------------------------------
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test for Missing 'value' argument
+---------------------------------
+>>> bg.integer_validator("Hello")
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("integer", 1, 2)
+Traceback (most recent call last):
+    ...
+TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+Testing negative or zreo values
+--------------------------------
+>>> bg.integer_validator("El-gibbor", -1)
+Traceback (most recent call last):
+...
+ValueError: El-gibbor must be greater than 0
+
+>>> bg.integer_validator("El-gibbor", 0)
+Traceback (most recent call last):
+...
+ValueError: El-gibbor must be greater than 0
+
+Test for non-integer values (list)
+-----------------------------------
+>>> bg.integer_validator("El-gibbor", [2, 44])
+Traceback (most recent call last):
+...
+TypeError: El-gibbor must be an integer
+
+>>> bg.integer_validator("El-gibbor", (2, 1))
+Traceback (most recent call last):
+...
+TypeError: El-gibbor must be an integer
+
+>>> bg.integer_validator("float", 4.5)
+Traceback (most recent call last):
+...
+TypeError: float must be an integer
+
+>>> bg.integer_validator("El-gibbor", "str")
+Traceback (most recent call last):
+...
+TypeError: El-gibbor must be an integer
+
+>>> bg.integer_validator("El-gibbor", None)
+Traceback (most recent call last):
+...
+TypeError: El-gibbor must be an integer
+
+>>> bg.integer_validator("bool", True)
+Traceback (most recent call last):
+...
+TypeError: bool must be an integer
+
+>>> bg.integer_validator("dict", {"key": "value"})
+Traceback (most recent call last):
+...
+TypeError: dict must be an integer
+
+ >>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
