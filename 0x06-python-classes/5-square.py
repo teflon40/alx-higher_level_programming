@@ -14,11 +14,7 @@ class Square:
                 TypeError
                 ValueError
         """
-        if type(size) is not int:
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -39,9 +35,7 @@ class Square:
 
     def my_print(self):
         """Prints a square with #"""
-        for i in range(0, self.__size):
-            for j in range(0, self.__size):
-                print('#', end="")
-            print("")
+        for _ in range(self.__size):
+            print('#' * self.__size)
         if self.__size == 0:
             print("")
