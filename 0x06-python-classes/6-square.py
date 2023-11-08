@@ -38,7 +38,7 @@ class Square:
         positionErr = "position must be a tuple of 2 positive integers"
 
         if not isinstance(value, tuple) or len(value) != 2:
-           raise TypeError(positionErr)
+            raise TypeError(positionErr)
         if not all(isinstance(element, int) for element in value):
             raise TypeError(positionErr)
         if any(element < 0 for element in value):
