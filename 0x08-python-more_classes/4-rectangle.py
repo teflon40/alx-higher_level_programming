@@ -60,10 +60,9 @@ class Rectangle:
 
     def __str__(self):
         """ returns string representation of objects"""
-        if self.__width == 0 or self.__height == 0:
+        if not (self.__height and self.__width):
             return ""
-        hash_row = ['#' * self.__width for _ in range(self.__height)]
-        return '\n'.join(hash_row)
+        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """ a str representation that can be used to recreate the object """

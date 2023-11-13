@@ -67,7 +67,6 @@ class Rectangle:
     def __str__(self) -> str:
         """ returns string representation of objects"""
 
-        if self.__width == 0 or self.__height == 0:
+        if not (self.__height and self.__width):
             return ""
-        hash_row = ['#' * self.__width for _ in range(self.__height)]
-        return '\n'.join(hash_row)
+        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
