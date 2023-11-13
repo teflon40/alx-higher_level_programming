@@ -72,11 +72,20 @@ class Rectangle(Base):
 
     def display(self):
         """Prints rectangle with #"""
-        print('\n'*self.__y, end="")
-        for _ in range(self.__height):
-            print(' '*self.__x + '#'*self.__width)
+        print('\n'*self.y, end="")
+        for _ in range(self.height):
+            print(' '*self.x + '#'*self.width)
 
     def __str__(self):
         """override str representation"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        arg_len = len(args)
+        self.id = args[0] if arg_len > 0 else self.id
+        self.width = args[1] if arg_len > 1 else self.width
+        self.height = args[2] if arg_len > 2 else self.height
+        self.x = args[3] if arg_len > 3 else self.x
+        self.y = args[4] if arg_len > 4 else self.y
