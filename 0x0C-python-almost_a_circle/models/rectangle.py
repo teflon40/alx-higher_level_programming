@@ -91,5 +91,5 @@ class Rectangle(Base):
             self.x = args[3] if arg_len > 3 else self.x
             self.y = args[4] if arg_len > 4 else self.y
         else:
-            for key, value in kwargs.iteritems():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
