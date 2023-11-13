@@ -66,8 +66,8 @@ class Rectangle:
         """ returns string representation of objects"""
         if not (self.__width and self.__height):
             return ""
-        s = [str(Rectangle.print_symbol) * self.__width for _ in range(self.__height)]
-        return '\n'.join(s)
+        sym = str(self.print_symbol)
+        return '\n'.join([sym * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """ a str representation that can be used to recreate the object """
