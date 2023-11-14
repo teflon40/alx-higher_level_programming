@@ -40,7 +40,9 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
-        new_dict = {}
-        for attribute in ['id', 'size', 'x', 'y']:
-            new_dict[attribute] = getattr(self, attribute)
-        return new_dict
+        return {
+            'id': self.id,
+            'size': self.width,
+            'x': self.x,
+            'y': self.y
+        }
