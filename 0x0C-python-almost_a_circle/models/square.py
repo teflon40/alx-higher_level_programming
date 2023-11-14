@@ -20,3 +20,8 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """override str representation"""
+        return "[square] ({}) {}/{} - {}"\
+            .format(self.id, self.x, self.y, self.width)
