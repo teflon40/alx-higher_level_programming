@@ -93,3 +93,10 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        new_dict = {}
+        for attribute in ['id', 'width', 'height', 'x', 'y']:
+            new_dict[attribute] = getattr(self, attribute)
+        return new_dict
