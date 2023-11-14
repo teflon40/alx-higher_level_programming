@@ -85,7 +85,7 @@ class Rectangle(Base):
         """Assigns an argument to each attribute"""
         if args:
             arg_len = len(args)
-            self.id = args[0] if arg_len > 0 else self.id
+            self.id = args[0]
             self.width = args[1] if arg_len > 1 else self.width
             self.height = args[2] if arg_len > 2 else self.height
             self.x = args[3] if arg_len > 3 else self.x

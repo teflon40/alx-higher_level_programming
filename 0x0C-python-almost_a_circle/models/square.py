@@ -23,5 +23,17 @@ class Square(Rectangle):
 
     def __str__(self):
         """override str representation"""
-        return "[square] ({}) {}/{} - {}"\
+        return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
+    
+    def update(self, *args, **kwargs):
+        """assigns attributes with values"""
+        if args:
+            args_len = len(args)
+            self.id = args[0]
+            self.size = args[1] if args_len > 1 else self.size
+            self.x = args[2] if args_len > 2 else self.x
+            self.y = args[3] if args_len > 3 else self.y
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
