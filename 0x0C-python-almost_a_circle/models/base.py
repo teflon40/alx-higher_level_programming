@@ -28,6 +28,8 @@ class Base:
         """returns list of the JSON string representation"""
         if not json_string:
             return '[]'
+        if not isinstance(json_string, str):
+            raise TypeError('json_string must be a string')
         return json.loads(json_string)
 
     @classmethod
@@ -41,4 +43,12 @@ class Base:
                 serialized = [inst.to_dictionary() for inst in list_objs]
                 jsonfile.write(cls.to_json_string(serialized))
 
-    
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        if cls.__name__ == 'Rectangle':
+            obj = cls(2, 1)
+        else:
+            obj = cls(1)
+        obj.update(**dictionary)
+        return obj
