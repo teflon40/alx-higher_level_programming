@@ -28,7 +28,7 @@ class Base:
         """returns list of the JSON string representation"""
         if json_string is None:
             return '[]'
-        return json.loads(json_string)
+        return [json.loads(json_string)]
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -40,3 +40,5 @@ class Base:
             else:
                 serialized = [inst.to_dictionary() for inst in list_objs]
                 jsonfile.write(cls.to_json_string(serialized))
+
+    
