@@ -31,5 +31,5 @@ class Base:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
-                serialized = [instance.to_dictionary() for instance in list_objs]
+                serialized = [inst.to_dictionary() for inst in list_objs]
                 jsonfile.write(cls.to_json_string(serialized))
