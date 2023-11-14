@@ -26,9 +26,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns list of the JSON string representation"""
-        if json_string is None:
+        if not json_string:
             return '[]'
-        return [json.loads(json_string)]
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
