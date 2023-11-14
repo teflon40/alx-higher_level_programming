@@ -25,7 +25,7 @@ class Square(Rectangle):
         """override str representation"""
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
-    
+
     def update(self, *args, **kwargs):
         """assigns attributes with values"""
         if args:
