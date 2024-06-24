@@ -13,7 +13,7 @@ for row in query_rows:
     print(row)
 cur.close()
 conn.close()
-```
+``` 
 #### With an ORM ⤵️  
 ```mysql
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "my_db"), pool_pre_ping=True)
