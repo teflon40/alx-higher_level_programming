@@ -7,5 +7,5 @@ then
 	TEST=$DIRPATH$1
 	cat $TEST | mysql -hlocalhost -uroot -p hbtn_0d_usa
 else
-	echo "Usage: $0 <sql file>"
+	echo "Usage: test.sh <sql file>"
 fi
