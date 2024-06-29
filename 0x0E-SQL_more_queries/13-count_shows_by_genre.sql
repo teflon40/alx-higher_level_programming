@@ -1,4 +1,4 @@
-/* Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each */
+/* Write a script that lists all genres in hbtn_0d_tvshows and displays the number of shows linked to each */
 --
 --	Each record should display: <genre> - <number_of_shows>  
 --	Don't display a genre that doesn't have any shows linked
