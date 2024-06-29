@@ -1,4 +1,4 @@
-/* Write a script that lists all the genres of the show Dexter in the database */
+/* Write a script that lists all the genres of the tv_show Dexter in the database */
 --
 -- Each record should display: tv_genres.name
 -- Results must be sorted in ascending order by the genre name
