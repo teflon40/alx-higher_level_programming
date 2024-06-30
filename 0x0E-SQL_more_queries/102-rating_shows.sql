@@ -1,4 +1,4 @@
-/* Write a script that lists all shows from hbtn_0d_tvshows_rate by their rating */
+/* Write a script that lists all shows in hbtn_0d_tvshows_rate by their rating */
 --
 -- Each record should display: tv_shows.title - rating sum
 -- Results must be sorted in descending order by the rating
